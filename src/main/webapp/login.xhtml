@@ -7,14 +7,17 @@
 	<h:head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>Login</title>
+		<h:outputStylesheet library="css" name="theme.css" />
 	</h:head>
 	<h:body>
-	    
-	    <form method="post" action="j_security_check">
-				<div>User Name:</div><input type="text" name="j_username" />
-				<div>Password: </div><input type="password" name="j_password" />
-				<input type="submit" value="Login" />
-		</form>
-	    
+		<div class="panel white-panel">
+		    <div class="panel blue-panel" style="width: 400px;">
+			    <form method="post" action="j_security_check">
+						<div><div class="icon-40 user-icon" /><input class="form-input" type="text" name="j_username"  style="width:40ch"/></div>
+						<div><div class="icon-40 password-icon" /><input class="form-input" type="password" name="j_password" style="width:40ch"/></div>
+						<input type="submit" value="" />
+				</form>
+		    </div>
+	    </div>
 	</h:body>
 </h:html>

@@ -33,7 +33,7 @@
 		
 		<version.jboss.as>7.5.0.Final-redhat-21</version.jboss.as>
 		        
-        <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
+        <version.jboss.maven.plugin>7.5.Final</version.jboss.maven.plugin>
 
         <version.jboss.spec.javaee.6.0>3.0.2.Final-redhat-15</version.jboss.spec.javaee.6.0>
 
@@ -116,11 +116,38 @@
                 </configuration>
             </plugin>
             <!-- JBoss AS plugin to deploy war -->
-            <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${version.jboss.maven.plugin}</version>
-            </plugin>
+               
+             <plugin>  
+                <groupId>org.jboss.as.plugins</groupId>  
+                <artifactId>jboss-as-maven-plugin</artifactId>  
+                <version>${version.jboss.maven.plugin}</version>  
+                <executions>  
+                    <execution>  
+                        <id>running</id>  
+                        <phase>pre-integration-test</phase>  
+                        <goals>  
+                            <goal>run</goal>  
+                        </goals>  
+                        <configuration>  
+                            <jbossHome>/opt/jboss/jboss-eap-6.4</jbossHome>  
+                            <hostname>localhost</hostname>  
+                            <username>admin</username>  
+                            <password>Safepassword#1</password>  
+                        </configuration>  
+                    </execution>  
+                    <execution>  
+                        <id>deploying</id>  
+                        <phase>install</phase>  
+                        <goals>  
+                            <goal>deploy</goal>  
+                        </goals>  
+                        <configuration>  
+                            <filename>target/${project.artifactId}.war</filename>  
+                        </configuration>  
+                    </execution>  
+                </executions>  
+            </plugin>  
+            
         </plugins>
     </build>
 

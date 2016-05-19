@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+.panel{
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.25),0 1px 2px rgba(0,0,0,.05);
+	text-shadow: 0 1px 0 rgba(255,255,255,.2);
+	background-repeat: repeat-x;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 20px;
+}
+
+.blue-panel{
+	background-image: linear-gradient(to bottom,#dedeff 0,#c3c3fa 100%);
+	border-color: #a7a7ff;
+}
+
+.white-panel{
+	background-image: linear-gradient(to bottom, #e0e0e0 0px, #ffffff 100%);
+	border-color: #a0a0a0;
+}
+
+.icon-22{
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	position: relative;
+	top: 6px;
+}
+.icon-40{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+}
+.user-icon{
+	background-image: url('../resources/images/user-noface.png');
+}
+
+.password-icon{
+	background-image: url('../resources/images/password.png');
+}
+
+.form-input{
+	background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 22px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+.form-input:focus{
+	border-color: #c9edc1;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
